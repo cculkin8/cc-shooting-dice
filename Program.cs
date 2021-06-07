@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 namespace ShootingDice
 {
     class Program
@@ -16,39 +15,32 @@ namespace ShootingDice
 
             Player player2 = new Player();
             player2.Name = "Sue";
-
             player2.Play(player1);
-
             Console.WriteLine("-------------------");
-
             SmackTalkingPlayer smackTalker = new SmackTalkingPlayer();
             smackTalker.Name = "Larry Bird";
-
             smackTalker.Play(player2);
             Console.WriteLine("-------------------");
-
             Player player3 = new Player();
             player3.Name = "Wilma";
-
-
             player3.Play(smackTalker);
-
             Console.WriteLine("-------------------");
-
             HumanPlayer human = new HumanPlayer();
             human.Name = inputtedName;
-
             human.Play(player3);
+            Console.WriteLine("-------------------");
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
-
             player1.Play(large);
-
             Console.WriteLine("-------------------");
             OneHigherPlayer higherRoller = new OneHigherPlayer();
             higherRoller.Name = "Cheater";
-
             higherRoller.Play(smackTalker);
+            Console.WriteLine("-------------------");
+            CreativeSmackTalkingPlayer Kobe = new CreativeSmackTalkingPlayer();
+            Kobe.Name = "Kobe";
+            Kobe.Play(smackTalker);
+            Console.WriteLine("-------------------");
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large, higherRoller, smackTalker
             };
