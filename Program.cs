@@ -45,6 +45,10 @@ namespace ShootingDice
             drew.Name = "Drew";
             drew.Play(smackTalker);
             Console.WriteLine("-------------------");
+            SoreLoserUpperHalfPlayer highBaller = new SoreLoserUpperHalfPlayer();
+            highBaller.Name = "Tiger Woods";
+            highBaller.Play(drew);
+            Console.WriteLine("-------------------");
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large, higherRoller, smackTalker
             };
