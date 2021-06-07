@@ -41,6 +41,10 @@ namespace ShootingDice
             Kobe.Name = "Kobe";
             Kobe.Play(smackTalker);
             Console.WriteLine("-------------------");
+            SoreLoserPlayer drew = new SoreLoserPlayer();
+            drew.Name = "Drew";
+            drew.Play(smackTalker);
+            Console.WriteLine("-------------------");
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large, higherRoller, smackTalker
             };

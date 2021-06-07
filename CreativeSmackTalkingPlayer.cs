@@ -15,11 +15,10 @@ namespace ShootingDice
             "You think season is over?",
             "Damn! I didn't mean to leave any time left on the clock.",
             "Float like a butterfly and sting like a bee...his hands can't hit what his eyes can't see.",
-            "Fo', fo', fo."
         };
         public override void Play(Player other)
         {
-            int y = new Random().Next(8)+1;
+            int y = new Random().Next(7)+1;
             Console.WriteLine(AdvancedSmack[y]);
             base.Play(other);
     }
