@@ -38,9 +38,12 @@ namespace ShootingDice
             player1.Play(large);
 
             Console.WriteLine("-------------------");
-
+            OneHigherPlayer higherRoller = new OneHigherPlayer();
+            higherRoller.Name = "Cheater";
+            
+            higherRoller.Play(smackTalker);
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+                player1, player2, player3, large, higherRoller, smackTalker
             };
 
             PlayMany(players);
@@ -72,7 +75,9 @@ namespace ShootingDice
                 // Make adjacent players play noe another
                 Player player1 = shuffledPlayers[i];
                 Player player2 = shuffledPlayers[i + 1];
-                player1.Play(player2);
+                
+                //try {
+                    player1.Play(player2);
             }
         }
     }
