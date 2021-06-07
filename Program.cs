@@ -8,6 +8,9 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine("What's your name player?");
+            string inputtedName = Console.ReadLine();
             Player player1 = new Player();
             player1.Name = "Bob";
 
@@ -32,6 +35,10 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            HumanPlayer human = new HumanPlayer();
+            human.Name = inputtedName;
+
+            human.Play(player3);
             Player large = new LargeDicePlayer();
             large.Name = "Bigun Rollsalot";
 
@@ -40,7 +47,7 @@ namespace ShootingDice
             Console.WriteLine("-------------------");
             OneHigherPlayer higherRoller = new OneHigherPlayer();
             higherRoller.Name = "Cheater";
-            
+
             higherRoller.Play(smackTalker);
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large, higherRoller, smackTalker
