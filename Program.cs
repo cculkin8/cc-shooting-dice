@@ -18,10 +18,17 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SmackTalkingPlayer smackTalker = new SmackTalkingPlayer();
+            smackTalker.Name = "Larry Bird";
+
+            smackTalker.Play(player2);
+            Console.WriteLine("-------------------");
+
             Player player3 = new Player();
             player3.Name = "Wilma";
 
-            player3.Play(player2);
+
+            player3.Play(smackTalker);
 
             Console.WriteLine("-------------------");
 
